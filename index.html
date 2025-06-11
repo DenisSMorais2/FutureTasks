@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuturaTasks Dark</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+    <div class="container mx-auto px-4 py-6 max-w-md">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                    FuturaTasks
+                </h1>
+                <p class="text-sm text-gray-400 mt-1">Organize sua vida com prêmios</p>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <i class="fas fa-moon text-white"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main tabs -->
+        <div class="flex mb-8 p-1 bg-gray-800 rounded-2xl">
+            <button id="tasksTab" class="tab-btn tab-active flex-1 py-3 px-4 text-center font-medium rounded-xl transition-all duration-300">
+                <i class="fas fa-tasks mr-2"></i> Tarefas
+            </button>
+            <button id="rewardsTab" class="tab-btn flex-1 py-3 px-4 text-center font-medium rounded-xl transition-all duration-300 text-gray-400">
+                <i class="fas fa-gift mr-2"></i> Prêmios
+            </button>
+            <button id="profileTab" class="tab-btn flex-1 py-3 px-4 text-center font-medium rounded-xl transition-all duration-300 text-gray-400">
+                <i class="fas fa-user mr-2"></i> Perfil
+            </button>
+        </div>
+
+        <!-- Tasks Tab -->
+        <div id="tasksContent" class="tab-panel fade-in-up">
+            <!-- Week days -->
+            <div class="flex overflow-x-auto mb-6 pb-2 space-x-2">
+                <button class="day-btn flex-shrink-0 px-6 py-3 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300 relative" data-day="monday">
+                    <div class="text-center">
+                        <div class="font-semibold">Seg</div>
+                        <div class="text-xs mt-1">12</div>
+                        <div class="trophy-indicator hidden absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-xs text-white"></i>
+                        </div>
+                    </div>
+                </button>
+                <button class="day-btn flex-shrink-0 px-6 py-3 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300 relative" data-day="tuesday">
+                    <div class="text-center">
+                        <div class="font-semibold">Ter</div>
+                        <div class="text-xs mt-1">13</div>
+                        <div class="trophy-indicator hidden absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-xs text-white"></i>
+                        </div>
+                    </div>
+                </button>
+                <button class="day-btn flex-shrink-0 px-6 py-3 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300 relative" data-day="wednesday">
+                    <div class="text-center">
+                        <div class="font-semibold">Qua</div>
+                        <div class="text-xs mt-1">14</div>
+                        <div class="trophy-indicator hidden absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-xs text-white"></i>
+                        </div>
+                    </div>
+                </button>
+                <button class="day-btn flex-shrink-0 px-6 py-3 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300 relative" data-day="thursday">
+                    <div class="text-center">
+                        <div class="font-semibold">Qui</div>
+                        <div class="text-xs mt-1">15</div>
+                        <div class="trophy-indicator hidden absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-xs text-white"></i>
+                        </div>
+                    </div>
+                </button>
+                <button class="day-btn flex-shrink-0 px-6 py-3 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300 relative day-active" data-day="friday">
+                    <div class="text-center">
+                        <div class="font-semibold">Sex</div>
+                        <div class="text-xs mt-1">16</div>
+                        <div class="trophy-indicator hidden absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-xs text-white"></i>
+                        </div>
+                    </div>
+                </button>
+                <button class="day-btn flex-shrink-0 px-6 py-3 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300 relative" data-day="saturday">
+                    <div class="text-center">
+                        <div class="font-semibold">Sáb</div>
+                        <div class="text-xs mt-1">17</div>
+                        <div class="trophy-indicator hidden absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-xs text-white"></i>
+                        </div>
+                    </div>
+                </button>
+                <button class="day-btn flex-shrink-0 px-6 py-3 rounded-2xl bg-gray-700 hover:bg-gray-600 transition-all duration-300 relative" data-day="sunday">
+                    <div class="text-center">
+                        <div class="font-semibold">Dom</div>
+                        <div class="text-xs mt-1">18</div>
+                        <div class="trophy-indicator hidden absolute -top-2 -right-2 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-xs text-white"></i>
+                        </div>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Progress ring for current day -->
+            <div class="card p-6 mb-6 text-center">
+                <div class="relative inline-block">
+                    <svg class="w-24 h-24 mx-auto" viewBox="0 0 36 36">
+                        <path class="progress-ring-bg" stroke="currentColor" stroke-width="2" fill="none" stroke-opacity="0.2"
+                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <path id="progressRing" class="progress-ring" stroke="url(#gradient)" stroke-width="2" fill="none" stroke-linecap="round"
+                              stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#1d4ed8"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span id="progressText" class="text-2xl font-bold">0%</span>
+                    </div>
+                </div>
+                <p class="mt-3 text-gray-400">Progresso de hoje</p>
+            </div>
+            
+            <!-- Add task button -->
+            <button id="addTaskBtn" class="btn-primary w-full mb-6 py-4 px-6 rounded-2xl font-semibold shadow-lg">
+                <i class="fas fa-plus mr-2"></i> Nova Tarefa
+            </button>
+            
+            <!-- Tasks list -->
+            <div id="tasksList" class="space-y-4 max-h-96 overflow-y-auto">
+                <!-- Tasks will be loaded here -->
+            </div>
+        </div>
+
+        <!-- Rewards Tab -->
+        <div id="rewardsContent" class="tab-panel hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold">🎁 Seus Prêmios</h2>
+                <button id="addRewardBtn" class="btn-primary py-2 px-4 rounded-xl text-sm">
+                    <i class="fas fa-plus mr-1"></i> Adicionar
+                </button>
+            </div>
+            
+            <!-- Earned rewards -->
+            <div class="card p-4 mb-6">
+                <h3 class="text-lg font-semibold mb-4 flex items-center">
+                    <i class="fas fa-trophy text-yellow-400 mr-2"></i>
+                    Prêmios Conquistados
+                </h3>
+                <div id="earnedRewardsList" class="space-y-2">
+                    <!-- Earned rewards will appear here -->
+                </div>
+            </div>
+            
+            <!-- Available rewards -->
+            <div class="card p-4 mb-6">
+                <h3 class="text-lg font-semibold mb-4 flex items-center">
+                    <i class="fas fa-gift text-blue-400 mr-2"></i>
+                    Prêmios Disponíveis
+                </h3>
+                <div id="availableRewardsList" class="space-y-2">
+                    <!-- Available rewards will appear here -->
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="card p-4 text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-medal text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Conquistados</h3>
+                    <p id="totalEarnedRewards" class="text-2xl font-bold text-blue-400">0</p>
+                </div>
+                <div class="card p-4 text-center">
+                    <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
+                        <i class="fas fa-check-double text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold mb-1">Total</h3>
+                    <p id="totalCompletedTasks" class="text-2xl font-bold text-green-400">0</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Tab -->
+        <div id="profileContent" class="tab-panel hidden">
+            <div class="text-center mb-8">
+                <div class="relative inline-block mb-4">
+                    <img id="profileImage" src="https://via.placeholder.com/120" alt="Profile" class="w-30 h-30 rounded-full object-cover border-4 border-blue-500 shadow-lg">
+                    <button id="changePhotoBtn" class="absolute bottom-0 right-0 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                    <input type="file" id="photoInput" accept="image/*" class="hidden">
+                </div>
+                <h2 id="userName" class="text-2xl font-bold mb-2">Usuário</h2>
+                
+                <div class="max-w-sm mx-auto">
+                    <div class="mb-4">
+                        <input type="text" id="nameInput" placeholder="Seu nome" class="w-full p-4 rounded-2xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                    </div>
+                    <button id="saveProfileBtn" class="btn-primary w-full py-3 px-6 rounded-2xl font-semibold">
+                        <i class="fas fa-save mr-2"></i> Salvar Perfil
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Today's stats -->
+            <div class="card p-6 mb-6">
+                <h3 class="text-lg font-semibold mb-4">Estatísticas de Hoje</h3>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                        <div id="todayTotal" class="text-3xl font-bold text-blue-400">0</div>
+                        <div class="text-sm text-gray-400">Total</div>
+                    </div>
+                    <div>
+                        <div id="todayCompleted" class="text-3xl font-bold text-green-400">0</div>
+                        <div class="text-sm text-gray-400">Completas</div>
+                    </div>
+                    <div>
+                        <div id="todayPending" class="text-3xl font-bold text-yellow-400">0</div>
+                        <div class="text-sm text-gray-400">Pendentes</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Weekly progress -->
+            <div class="card p-6">
+                <h3 class="text-lg font-semibold mb-4">Progresso Semanal</h3>
+                <div class="grid grid-cols-7 gap-2">
+                    <div class="text-center">
+                        <div id="trophy-monday" class="trophy-day w-8 h-8 mx-auto mb-2 rounded-full bg-gray-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-gray-400 text-xs"></i>
+                        </div>
+                        <span class="text-xs">Seg</span>
+                    </div>
+                    <div class="text-center">
+                        <div id="trophy-tuesday" class="trophy-day w-8 h-8 mx-auto mb-2 rounded-full bg-gray-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-gray-400 text-xs"></i>
+                        </div>
+                        <span class="text-xs">Ter</span>
+                    </div>
+                    <div class="text-center">
+                        <div id="trophy-wednesday" class="trophy-day w-8 h-8 mx-auto mb-2 rounded-full bg-gray-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-gray-400 text-xs"></i>
+                        </div>
+                        <span class="text-xs">Qua</span>
+                    </div>
+                    <div class="text-center">
+                        <div id="trophy-thursday" class="trophy-day w-8 h-8 mx-auto mb-2 rounded-full bg-gray-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-gray-400 text-xs"></i>
+                        </div>
+                        <span class="text-xs">Qui</span>
+                    </div>
+                    <div class="text-center">
+                        <div id="trophy-friday" class="trophy-day w-8 h-8 mx-auto mb-2 rounded-full bg-gray-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-gray-400 text-xs"></i>
+                        </div>
+                        <span class="text-xs">Sex</span>
+                    </div>
+                    <div class="text-center">
+                        <div id="trophy-saturday" class="trophy-day w-8 h-8 mx-auto mb-2 rounded-full bg-gray-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-gray-400 text-xs"></i>
+                        </div>
+                        <span class="text-xs">Sáb</span>
+                    </div>
+                    <div class="text-center">
+                        <div id="trophy-sunday" class="trophy-day w-8 h-8 mx-auto mb-2 rounded-full bg-gray-600 flex items-center justify-center">
+                            <i class="fas fa-trophy text-gray-400 text-xs"></i>
+                        </div>
+                        <span class="text-xs">Dom</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Modal -->
+    <div id="taskModal" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+        <div class="card w-full max-w-md p-6 max-h-[90vh] overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-bold">Nova Tarefa</h2>
+                <button id="closeModalBtn" class="text-gray-400 hover:text-gray-200 p-2">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            
+            <form id="taskForm" class="space-y-4">
+                <input type="hidden" id="taskId">
+                
+                <div>
+                    <label class="block mb-2 text-sm font-medium">Título da Tarefa</label>
+                    <input type="text" id="taskTitle" required class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                </div>
+                
+                <div>
+                    <label class="block mb-2 text-sm font-medium">Descrição</label>
+                    <textarea id="taskDescription" rows="3" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 resize-none transition text-white"></textarea>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block mb-2 text-sm font-medium">Horário</label>
+                        <input type="time" id="taskTime" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                    </div>
+                    <div>
+                        <label class="block mb-2 text-sm font-medium">Categoria</label>
+                        <select id="taskCategory" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                            <option value="work">💼 Trabalho</option>
+                            <option value="personal">🏠 Pessoal</option>
+                            <option value="health">🏃 Saúde</option>
+                            <option value="study">📚 Estudos</option>
+                            <option value="other">🔧 Outros</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block mb-2 text-sm font-medium">Prêmio Personalizado (opcional)</label>
+                    <input type="text" id="taskReward" placeholder="Ex: Assistir um episódio da série favorita" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                </div>
+                
+                <div>
+                    <label class="block mb-2 text-sm font-medium">Imagem (opcional)</label>
+                    <div class="flex items-center">
+                        <input type="file" id="taskImage" accept="image/*" class="hidden">
+                        <button type="button" id="uploadImageBtn" class="p-4 bg-gray-700 rounded-l-xl border-r border-gray-600 hover:bg-gray-600 transition">
+                            <i class="fas fa-image text-blue-400"></i>
+                        </button>
+                        <input type="text" id="imagePreviewText" placeholder="Nenhuma imagem selecionada" class="flex-1 p-4 bg-gray-700 rounded-r-xl border-none text-gray-400" readonly>
+                    </div>
+                    <div id="imagePreviewContainer" class="mt-3 hidden">
+                        <img id="imagePreview" class="w-full rounded-xl object-cover max-h-48">
+                    </div>
+                </div>
+                
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button" id="cancelTaskBtn" class="px-6 py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition font-medium">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn-primary px-6 py-3 rounded-xl font-medium">
+                        <i class="fas fa-save mr-2"></i> Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reward Modal -->
+    <div id="rewardModal" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
+        <div class="card w-full max-w-md p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-bold">Novo Prêmio</h2>
+                <button id="closeRewardModalBtn" class="text-gray-400 hover:text-gray-200 p-2">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            
+            <form id="rewardForm" class="space-y-4">
+                <div>
+                    <label class="block mb-2 text-sm font-medium">Nome do Prêmio</label>
+                    <input type="text" id="rewardTitle" required class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white" placeholder="Ex: Assistir um filme">
+                </div>
+                
+                <div>
+                    <label class="block mb-2 text-sm font-medium">Descrição (opcional)</label>
+                    <textarea id="rewardDescription" rows="2" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 resize-none transition text-white" placeholder="Descreva seu prêmio..."></textarea>
+                </div>
+                
+                <div>
+                    <label class="block mb-2 text-sm font-medium">Ícone</label>
+                    <select id="rewardIcon" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                        <option value="🎬">🎬 Filme/Série</option>
+                        <option value="🍕">🍕 Comida</option>
+                        <option value="🎮">🎮 Jogos</option>
+                        <option value="🛍️">🛍️ Compras</option>
+                        <option value="🏖️">🏖️ Lazer</option>
+                        <option value="☕">☕ Café/Bebida</option>
+                        <option value="📚">📚 Livro</option>
+                        <option value="🎵">🎵 Música</option>
+                        <option value="💆">💆 Relaxamento</option>
+                        <option value="🎁">🎁 Presente</option>
+                    </select>
+                </div>
+                
+                <div class="flex justify-end space-x-3 pt-4">
+                    <button type="button" id="cancelRewardBtn" class="px-6 py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition font-medium">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn-primary px-6 py-3 rounded-xl font-medium">
+                        <i class="fas fa-save mr-2"></i> Salvar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Reward Notification -->
+    <div id="rewardNotification" class="fixed top-4 right-4 card p-6 shadow-xl transform translate-x-full transition-transform duration-500 z-50 hidden">
+        <div class="flex items-start">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-white mr-4 reward-glow">
+                <i class="fas fa-gift text-2xl"></i>
+            </div>
+            <div class="flex-1">
+                <h3 class="font-bold text-lg">🎁 Prêmio Conquistado!</h3>
+                <p id="rewardNotificationMessage" class="text-sm text-gray-400 mt-1">Você ganhou um novo prêmio!</p>
+            </div>
+            <button id="closeRewardNotificationBtn" class="ml-4 text-gray-400 hover:text-gray-200 p-1">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
