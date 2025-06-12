@@ -57,31 +57,31 @@ const categoryConfig = {
         icon: '💼', 
         name: 'Trabalho', 
         color: 'blue',
-        rewards: ['☕ 15 min de pausa para café', '🎵 Ouvir 3 músicas favoritas', '📱 10 min nas redes sociais', '🚶 Dar uma volta de 5 minutos']
+        rewards: ['🦾Mais um dia concluido Guerreiro', '🙂‍↕️Produtividade em alta!', '🫡Excelente ritmo!', '😜Mente clara, metas definidas!', '🪙Transformando Tempo em ouro!', '😲Boa gestão e metas claras!', '😇Compromisso profissional', '⚖️Equilíbrio importa!', '👁️Visão de futuro ativada!', '😀Comunicação é a chave!', '🛫Meta alcançada!']
     },
     personal: { 
         icon: '🏠', 
         name: 'Pessoal', 
         color: 'green',
-        rewards: ['📺 Assistir um episódio curto', '🛀 Relaxar por 15 minutos', '🍪 Comer um doce especial', '📖 Ler por 10 minutos']
+        rewards: ['🖼️Inspiração desbloqueada!', '🛀Autocuidado conta!', '🎁Parabéns por recarregar a mente!', '📖Modo Clareza ativada!', '😎Emoções organizadas!', '🤝 "Laços fortalecidos!', '🧘 "Fez uma pausa consciente. Respire fundo!', '🎶Pequenas vitórias!', '🧹Espaço limpo, mente limpa!', '📚Curiosidade viva!']
     },
     health: { 
         icon: '🏃', 
         name: 'Saúde', 
         color: 'yellow',
-        rewards: ['🥤 Smoothie nutritivo', '🧘 5 min de meditação', '🏆 Registrar conquista no app', '💪 Comemorar o progresso']
+        rewards: ['💧Você se manteve hidratado o dia inteiro. Saúde em primeiro lugar!', '🧘Energia garantida!', '🛌Dormiu bem por 7+ horas. Recarga completa!', '💪 Comemorar o progresso', '🏃Fez uma atividade física hoje. Corpo em movimento!', '🚭Evitou hábitos prejudiciais. Vitória silenciosa!', '🧘Equilíbrio alcançado!', '🩺Cuidando-se!', '🚶Pequenos passos contam!', '🧼Detalhes importam!', '📉Evolução em andamento!"']
     },
     study: { 
         icon: '📚', 
         name: 'Estudos', 
         color: 'purple',
-        rewards: ['🎮 15 min de jogos', '🍕 Lanche especial', '📱 Assistir vídeos por 10 min', '🎯 Marcar progresso no calendário']
+        rewards: ['📖Estudou por 1h sem distrações. Foco absoluto!', '📝Finalizou um módulo ou lição. Aprendizado em crescimento!', '🧠Fez revisão de conteúdo. Memória fortalecida!', '🎯Estabeleceu metas de estudo. Direção clara!', '🕒Estudou 5 dias consecutivos. Disciplina em ação!', '📚Concluiu a leitura de um capítulo. Passo a passo!', '✅Próximo nível!', '🧪Conhecimento útil!', '🎓Rumo à excelência!', '🧩Pensamento crítico ativado!']
     },
     other: { 
         icon: '🔧', 
-        name: 'Outros', 
+        name: 'Hobbies', 
         color: 'gray',
-        rewards: ['⭐ Se dar os parabéns', '📝 Anotar a conquista', '😊 Momento de gratidão', '🎉 Mini celebração']
+        rewards: ['⭐ Se dar os parabéns', '🕹️Tirou um momento para lazer ou hobby. Merecido!', '😊 Momento de gratidão', '🎉 Mini celebração', '💻Explorou uma nova ferramenta ou app. Curiosidade ativa!', '📆Parabéns pela visão!', '🌱Aprendeu algo fora da rotina. Evolução espontânea!', '🎯Fim do atraso!', '🛠️Reconstrução bem-sucedida!', '🎥Inspiração abastecida!', '🧹Menos distração, mais foco!']
     }
 };
 
