@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FuturaTasks Dark</title>
+    <title>FutureTasks</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -14,13 +14,13 @@
         <header class="flex justify-between items-center mb-8">
             <div>
                 <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-                    FuturaTasks
+                    FutureTasks
                 </h1>
-                <p class="text-sm text-gray-400 mt-1">Organize sua vida com prêmios</p>
+                <p class="text-sm text-gray-400 mt-1">Organize sua vida com prêmios automáticos</p>
             </div>
             <div class="flex items-center space-x-3">
                 <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
-                    <i class="fas fa-moon text-white"></i>
+                    <i class="fas fa-trophy text-white"></i>
                 </div>
             </div>
         </header>
@@ -142,32 +142,22 @@
 
         <!-- Rewards Tab -->
         <div id="rewardsContent" class="tab-panel hidden">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold">🎁 Seus Prêmios</h2>
-                <button id="addRewardBtn" class="btn-primary py-2 px-4 rounded-xl text-sm">
-                    <i class="fas fa-plus mr-1"></i> Adicionar
-                </button>
-            </div>
-            
-            <!-- Earned rewards -->
-            <div class="card p-4 mb-6">
-                <h3 class="text-lg font-semibold mb-4 flex items-center">
-                    <i class="fas fa-trophy text-yellow-400 mr-2"></i>
-                    Prêmios Conquistados
-                </h3>
-                <div id="earnedRewardsList" class="space-y-2">
-                    <!-- Earned rewards will appear here -->
+            <!-- Week selector -->
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold mb-4">🎁 Seus Prêmios</h2>
+                <div class="flex space-x-2 overflow-x-auto pb-2" id="weekSelector">
+                    <!-- Week buttons will be generated here -->
                 </div>
             </div>
             
-            <!-- Available rewards -->
+            <!-- Current week rewards -->
             <div class="card p-4 mb-6">
                 <h3 class="text-lg font-semibold mb-4 flex items-center">
-                    <i class="fas fa-gift text-blue-400 mr-2"></i>
-                    Prêmios Disponíveis
+                    <i class="fas fa-trophy text-yellow-400 mr-2"></i>
+                    <span id="currentWeekTitle">Prêmios da Semana</span>
                 </h3>
-                <div id="availableRewardsList" class="space-y-2">
-                    <!-- Available rewards will appear here -->
+                <div id="weeklyRewardsList" class="space-y-2">
+                    <!-- Weekly rewards will appear here -->
                 </div>
             </div>
             
@@ -177,15 +167,15 @@
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
                         <i class="fas fa-medal text-white text-2xl"></i>
                     </div>
-                    <h3 class="font-semibold mb-1">Conquistados</h3>
-                    <p id="totalEarnedRewards" class="text-2xl font-bold text-blue-400">0</p>
+                    <h3 class="font-semibold mb-1">Esta Semana</h3>
+                    <p id="weekRewards" class="text-2xl font-bold text-blue-400">0</p>
                 </div>
                 <div class="card p-4 text-center">
                     <div class="w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center">
                         <i class="fas fa-check-double text-white text-2xl"></i>
                     </div>
                     <h3 class="font-semibold mb-1">Total</h3>
-                    <p id="totalCompletedTasks" class="text-2xl font-bold text-green-400">0</p>
+                    <p id="totalRewards" class="text-2xl font-bold text-green-400">0</p>
                 </div>
             </div>
         </div>
@@ -307,24 +297,24 @@
                 
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label class="block mb-2 text-sm font-medium">Horário</label>
-                        <input type="time" id="taskTime" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                        <label class="block mb-2 text-sm font-medium">Horário Início</label>
+                        <input type="time" id="taskStartTime" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
                     </div>
                     <div>
-                        <label class="block mb-2 text-sm font-medium">Categoria</label>
-                        <select id="taskCategory" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
-                            <option value="work">💼 Trabalho</option>
-                            <option value="personal">🏠 Pessoal</option>
-                            <option value="health">🏃 Saúde</option>
-                            <option value="study">📚 Estudos</option>
-                            <option value="other">🔧 Outros</option>
-                        </select>
+                        <label class="block mb-2 text-sm font-medium">Horário Fim</label>
+                        <input type="time" id="taskEndTime" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
                     </div>
                 </div>
                 
                 <div>
-                    <label class="block mb-2 text-sm font-medium">Prêmio Personalizado (opcional)</label>
-                    <input type="text" id="taskReward" placeholder="Ex: Assistir um episódio da série favorita" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                    <label class="block mb-2 text-sm font-medium">Categoria</label>
+                    <select id="taskCategory" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
+                        <option value="work">💼 Trabalho</option>
+                        <option value="personal">🏠 Pessoal</option>
+                        <option value="health">🏃 Saúde</option>
+                        <option value="study">📚 Estudos</option>
+                        <option value="other">🔧 Outros</option>
+                    </select>
                 </div>
                 
                 <div>
@@ -353,55 +343,6 @@
         </div>
     </div>
 
-    <!-- Reward Modal -->
-    <div id="rewardModal" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center p-4 z-50 hidden">
-        <div class="card w-full max-w-md p-6">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-xl font-bold">Novo Prêmio</h2>
-                <button id="closeRewardModalBtn" class="text-gray-400 hover:text-gray-200 p-2">
-                    <i class="fas fa-times text-lg"></i>
-                </button>
-            </div>
-            
-            <form id="rewardForm" class="space-y-4">
-                <div>
-                    <label class="block mb-2 text-sm font-medium">Nome do Prêmio</label>
-                    <input type="text" id="rewardTitle" required class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white" placeholder="Ex: Assistir um filme">
-                </div>
-                
-                <div>
-                    <label class="block mb-2 text-sm font-medium">Descrição (opcional)</label>
-                    <textarea id="rewardDescription" rows="2" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 resize-none transition text-white" placeholder="Descreva seu prêmio..."></textarea>
-                </div>
-                
-                <div>
-                    <label class="block mb-2 text-sm font-medium">Ícone</label>
-                    <select id="rewardIcon" class="w-full p-4 rounded-xl bg-gray-700 border-none focus:ring-2 focus:ring-blue-500 transition text-white">
-                        <option value="🎬">🎬 Filme/Série</option>
-                        <option value="🍕">🍕 Comida</option>
-                        <option value="🎮">🎮 Jogos</option>
-                        <option value="🛍️">🛍️ Compras</option>
-                        <option value="🏖️">🏖️ Lazer</option>
-                        <option value="☕">☕ Café/Bebida</option>
-                        <option value="📚">📚 Livro</option>
-                        <option value="🎵">🎵 Música</option>
-                        <option value="💆">💆 Relaxamento</option>
-                        <option value="🎁">🎁 Presente</option>
-                    </select>
-                </div>
-                
-                <div class="flex justify-end space-x-3 pt-4">
-                    <button type="button" id="cancelRewardBtn" class="px-6 py-3 rounded-xl bg-gray-700 hover:bg-gray-600 transition font-medium">
-                        Cancelar
-                    </button>
-                    <button type="submit" class="btn-primary px-6 py-3 rounded-xl font-medium">
-                        <i class="fas fa-save mr-2"></i> Salvar
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <!-- Reward Notification -->
     <div id="rewardNotification" class="fixed top-4 right-4 card p-6 shadow-xl transform translate-x-full transition-transform duration-500 z-50 hidden">
         <div class="flex items-start">
@@ -417,6 +358,7 @@
             </button>
         </div>
     </div>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>

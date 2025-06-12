@@ -1,173 +1,359 @@
- :root {
-            --primary: #3b82f6;
-            --secondary: #1d4ed8;
-            --accent: #60a5fa;
-            --success: #22c55e;
-            --warning: #f59e0b;
-            --danger: #ef4444;
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #334155;
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --border-color: #475569;
-        }
+:root {
+    --primary: #3b82f6;
+    --secondary: #1d4ed8;
+    --accent: #60a5fa;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: #334155;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #475569;
+}
 
-        body {
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-            color: var(--text-primary);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            min-height: 100vh;
-        }
+body {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 100vh;
+}
 
-        .card {
-            background-color: var(--bg-card);
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-            border: 1px solid var(--border-color);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+.card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        .card:hover {
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
-            transform: translateY(-2px);
-        }
+.card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            transition: all 0.3s ease;
-        }
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
 
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-        }
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
 
-        .day-active {
-            background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
-            color: white !important;
-            transform: scale(1.05);
-        }
+.day-active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    color: white !important;
+    transform: scale(1.05);
+}
 
-        .task-completed {
-            opacity: 0.7;
-            background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
-            border-left: 4px solid var(--success);
-        }
+.task-completed {
+    opacity: 0.7;
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+    border-left: 4px solid var(--success);
+}
 
-        .category-work { border-left-color: #3b82f6; }
-        .category-personal { border-left-color: #22c55e; }
-        .category-health { border-left-color: #f59e0b; }
-        .category-study { border-left-color: #8b5cf6; }
-        .category-other { border-left-color: #6b7280; }
+.task-in-progress {
+    border-left: 4px solid #f59e0b;
+    background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+}
 
-        .trophy-animation {
-            animation: bounce 0.6s ease-in-out;
-        }
+.category-work { 
+    border-left-color: #3b82f6; 
+}
 
-        @keyframes bounce {
-            0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
-            40%, 43% { transform: translate3d(0, -15px, 0); }
-            70% { transform: translate3d(0, -7px, 0); }
-            90% { transform: translate3d(0, -2px, 0); }
-        }
+.category-personal { 
+    border-left-color: #22c55e; 
+}
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.category-health { 
+    border-left-color: #f59e0b; 
+}
 
-        .fade-in-up {
-            animation: fadeInUp 0.5s ease-out;
-        }
+.category-study { 
+    border-left-color: #8b5cf6; 
+}
 
-        .time-badge {
-            background: rgba(59, 130, 246, 0.2);
-            color: var(--accent);
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
+.category-other { 
+    border-left-color: #6b7280; 
+}
 
-        .category-badge {
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
+.trophy-animation {
+    animation: bounce 0.6s ease-in-out;
+}
 
-        .category-work { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
-        .category-personal { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
-        .category-health { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
-        .category-study { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
-        .category-other { background: rgba(107, 114, 128, 0.2); color: #9ca3af; }
+@keyframes bounce {
+    0%, 20%, 53%, 80%, 100% { 
+        transform: translate3d(0,0,0); 
+    }
+    40%, 43% { 
+        transform: translate3d(0, -15px, 0); 
+    }
+    70% { 
+        transform: translate3d(0, -7px, 0); 
+    }
+    90% { 
+        transform: translate3d(0, -2px, 0); 
+    }
+}
 
-        .tab-active {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white !important;
-            border-radius: 12px;
-        }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        .progress-ring {
-            transition: stroke-dasharray 0.35s;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-        }
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
+}
 
-        .reward-glow {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
-            animation: pulse 2s infinite;
-        }
+.time-badge {
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--accent);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
+.category-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
 
-        .reward-item {
-            background: rgba(59, 130, 246, 0.1);
-            border: 2px solid rgba(59, 130, 246, 0.3);
-            border-radius: 12px;
-            padding: 12px;
-            margin: 8px 0;
-            transition: all 0.3s ease;
-        }
+.category-work { 
+    background: rgba(59, 130, 246, 0.2); 
+    color: #60a5fa; 
+}
 
-        .reward-item:hover {
-            border-color: var(--primary);
-            background: rgba(59, 130, 246, 0.2);
-        }
+.category-personal { 
+    background: rgba(34, 197, 94, 0.2); 
+    color: #4ade80; 
+}
 
-        .earned-reward {
-            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.1));
-            border-color: var(--success);
-        }
+.category-health { 
+    background: rgba(245, 158, 11, 0.2); 
+    color: #fbbf24; 
+}
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
+.category-study { 
+    background: rgba(139, 92, 246, 0.2); 
+    color: #a78bfa; 
+}
 
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-            border-radius: 3px;
-        }
+.category-other { 
+    background: rgba(107, 114, 128, 0.2); 
+    color: #9ca3af; 
+}
 
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 3px;
-        }
+.tab-active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white !important;
+    border-radius: 12px;
+}
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent);
-        }
+.progress-ring {
+    transition: stroke-dasharray 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.reward-glow {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1; 
+    }
+    50% { 
+        opacity: 0.8; 
+    }
+}
+
+.reward-item {
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 12px;
+    margin: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.reward-item:hover {
+    border-color: var(--primary);
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.earned-reward {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.1));
+    border-color: var(--success);
+}
+
+.week-selector {
+    background: rgba(59, 130, 246, 0.1);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: 12px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.week-selector:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: var(--primary);
+}
+
+.week-selector.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: scale(1.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .day-btn {
+        min-width: 60px;
+    }
+    
+    .week-selector {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Animation for new rewards */
+@keyframes rewardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.new-reward {
+    animation: rewardSlideIn 0.5s ease-out;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Progress ring background */
+.progress-ring-bg {
+    color: var(--border-color);
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Notification styles */
+.notification {
+    backdrop-filter: blur(10px);
+    background: rgba(51, 65, 85, 0.95);
+    border: 1px solid var(--border-color);
+}
+
+/* Category specific hover effects */
+.category-work:hover {
+    border-left-color: #60a5fa;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+}
+
+.category-personal:hover {
+    border-left-color: #4ade80;
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.2);
+}
+
+.category-health:hover {
+    border-left-color: #fbbf24;
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.2);
+}
+
+.category-study:hover {
+    border-left-color: #a78bfa;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+}
+
+.category-other:hover {
+    border-left-color: #9ca3af;
+    box-shadow: 0 4px 20px rgba(107, 114, 128, 0.2);
+}

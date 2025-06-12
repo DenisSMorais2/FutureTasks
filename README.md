@@ -1,279 +1,270 @@
-# 🌙 FuturaTasks Dark
+# 🚀 FutureTasks
 
-Um aplicativo moderno de gerenciamento de tarefas com sistema de gamificação através de prêmios personalizados. Interface exclusiva em tema dark com paleta de cores azuis.
+**Organize sua vida com prêmios automáticos**
 
-![FuturaTasks](https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge)
-![Theme](https://img.shields.io/badge/Theme-Dark%20Only-1a1a1a?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+FutureTasks é um aplicativo web inovador de gerenciamento de tarefas que gamifica sua produtividade através de um sistema automático de recompensas por categoria. Complete tarefas e receba prêmios personalizados instantaneamente!
 
-## 🎯 **Características Principais**
+## ✨ Características Principais
 
-### ✨ **Interface Moderna**
-- **Tema Dark Exclusivo** com paleta azul (#3b82f6, #1d4ed8, #60a5fa)
-- **Gradientes suaves** e animações fluidas
-- **Cards hover** com elevação 3D
-- **Tipografia moderna** com ícones Font Awesome
+### 🎁 **Sistema de Prêmios Automáticos**
+- **Prêmios por Categoria**: Cada categoria de tarefa tem seu próprio conjunto de recompensas
+- **Recompensas Instantâneas**: Ganhe prêmios automaticamente ao completar tarefas
+- **Variedade de Prêmios**: Mais de 20 tipos diferentes de recompensas
+- **Organização Semanal**: Prêmios organizados por semanas do ano
 
-### 📅 **Gerenciamento de Tarefas**
-- **Organização semanal** com seleção de dias
-- **Horários personalizados** para cada tarefa
-- **5 categorias** com códigos de cores:
-  - 💼 **Trabalho** (Azul)
-  - 🏠 **Pessoal** (Verde) 
-  - 🏃 **Saúde** (Amarelo)
-  - 📚 **Estudos** (Roxo)
-  - 🔧 **Outros** (Cinza)
-- **Upload de imagens** para ilustrar tarefas
-- **Progresso circular** animado por dia
+### ⏰ **Gestão Avançada de Tempo**
+- **Horários de Início e Fim**: Defina períodos específicos para suas tarefas
+- **Indicador "Em Andamento"**: Veja quais tarefas estão ativas no momento
+- **Timer Automático**: Interface atualizada automaticamente a cada minuto
+- **Notificações**: Lembretes 5 minutos antes do início das tarefas
 
-### 🎁 **Sistema de Prêmios Gamificado**
-- **Prêmios personalizados** por tarefa concluída
-- **Biblioteca de prêmios** reutilizáveis
-- **10 ícones temáticos** disponíveis
-- **Notificações animadas** de conquista
-- **Histórico completo** de prêmios conquistados
+### 📊 **Acompanhamento Detalhado**
+- **Progresso Diário**: Anel de progresso visual para cada dia
+- **Estatísticas Semanais**: Acompanhe seus prêmios por semana
+- **Troféus**: Sistema de conquistas para dias 100% completos
+- **Analytics**: Insights sobre produtividade e categorias favoritas
 
-### 🏆 **Sistema de Troféus**
-- **Troféu por dia** ao completar todas as tarefas
-- **Indicadores visuais** nos dias da semana
-- **Progresso semanal** no perfil
+### 💫 **Interface Moderna**
+- **Design Dark**: Interface elegante com gradientes e animações
+- **Responsiva**: Funciona perfeitamente em desktop e mobile
+- **Animações Suaves**: Transições e feedback visual aprimorado
+- **Acessibilidade**: Suporte a atalhos de teclado e navegação
 
-## 🚀 **Tecnologias Utilizadas**
+## 🎯 Categorias de Tarefas e Prêmios
 
-- **HTML5** - Estrutura semântica
-- **CSS3** - Estilização avançada com variáveis CSS
-- **JavaScript ES6+** - Lógica da aplicação
-- **Tailwind CSS** - Framework de estilização
-- **Font Awesome** - Biblioteca de ícones
-- **LocalStorage API** - Persistência de dados local
+### 💼 **Trabalho**
+- ☕ 15 min de pausa para café
+- 🎵 Ouvir 3 músicas favoritas
+- 📱 10 min nas redes sociais
+- 🚶 Dar uma volta de 5 minutos
 
-## 📁 **Estrutura do Projeto**
+### 🏠 **Pessoal**
+- 📺 Assistir um episódio curto
+- 🛀 Relaxar por 15 minutos
+- 🍪 Comer um doce especial
+- 📖 Ler por 10 minutos
 
+### 🏃 **Saúde**
+- 🥤 Smoothie nutritivo
+- 🧘 5 min de meditação
+- 🏆 Registrar conquista no app
+- 💪 Comemorar o progresso
+
+### 📚 **Estudos**
+- 🎮 15 min de jogos
+- 🍕 Lanche especial
+- 📱 Assistir vídeos por 10 min
+- 🎯 Marcar progresso no calendário
+
+### 🔧 **Outros**
+- ⭐ Se dar os parabéns
+- 📝 Anotar a conquista
+- 😊 Momento de gratidão
+- 🎉 Mini celebração
+
+## 🛠️ Instalação
+
+### Pré-requisitos
+- Navegador web moderno (Chrome, Firefox, Safari, Edge)
+- Não requer instalação de software adicional
+
+### Configuração Rápida
+
+1. **Clone ou baixe o repositório**
+```bash
+git clone https://github.com/seu-usuario/futuretasks.git
+cd futuretasks
 ```
-futuratasks/
-│
-├── index.html          # Aplicação principal
-├── README.md           # Documentação
-└── assets/
-    ├── screenshots/    # Capturas de tela
-    └── docs/          # Documentação adicional
+
+2. **Estrutura de arquivos necessária**
+```
+futuretasks/
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
 ```
 
-## 🛠️ **Como Usar**
+3. **Abrir a aplicação**
+- Abra o arquivo `index.html` em seu navegador
+- Ou use um servidor local:
+```bash
+# Python
+python -m http.server 8000
 
-### **Instalação**
-1. Clone ou baixe o arquivo `index.html`
-2. Abra em qualquer navegador moderno
-3. Não requer servidor - funciona offline!
+# Node.js (http-server)
+npx http-server
 
-### **Primeiros Passos**
+# Live Server (VS Code)
+# Clique com botão direito no index.html → "Open with Live Server"
+```
 
-#### 1. **Configurar Perfil**
-- Acesse a aba **Perfil**
-- Adicione seu nome e foto
-- Clique em **Salvar Perfil**
+4. **Acesse no navegador**
+```
+http://localhost:8000
+```
 
-#### 2. **Criar Tarefas**
-- Na aba **Tarefas**, clique em **Nova Tarefa**
-- Preencha:
-  - **Título** (obrigatório)
-  - **Descrição** (opcional)
-  - **Horário** (opcional)
-  - **Categoria** (trabalho, pessoal, etc.)
-  - **Prêmio Personalizado** (opcional)
-  - **Imagem** (opcional)
+## 🎮 Como Usar
 
-#### 3. **Gerenciar Prêmios**
-- Na aba **Prêmios**, clique em **Adicionar**
-- Crie prêmios reutilizáveis:
-  - Nome do prêmio
-  - Descrição
-  - Ícone temático
+### 📋 **Gerenciando Tarefas**
 
-#### 4. **Conquistar Prêmios**
-- Complete tarefas com prêmios personalizados
-- Receba notificação de conquista
-- Visualize na seção **Prêmios Conquistados**
-- Marque como **Usado** quando desejar
+1. **Criar Nova Tarefa**
+   - Clique no botão "Nova Tarefa"
+   - Preencha título, descrição (opcional)
+   - Defina horários de início e fim (opcional)
+   - Escolha uma categoria
+   - Adicione imagem se desejar
+   - Clique em "Salvar"
 
-## 📱 **Funcionalidades Detalhadas**
+2. **Completar Tarefas**
+   - Clique no botão circular ao lado da tarefa
+   - Receba um prêmio automático instantaneamente
+   - Veja sua notificação de recompensa
 
-### **Aba Tarefas**
-- ✅ **Visualização semanal** com navegação por dias
-- ✅ **Progresso circular** mostrando % de conclusão
-- ✅ **Lista organizada** por horário
-- ✅ **Badges visuais** para categoria e horário
-- ✅ **Ações rápidas**: completar, editar, excluir
-- ✅ **Troféus automáticos** ao completar o dia
+3. **Editar/Excluir**
+   - Use os botões de editar (✏️) ou excluir (🗑️)
+   - Confirme ações quando solicitado
 
-### **Aba Prêmios**
-- 🎁 **Prêmios Conquistados**: lista com data de conquista
-- 🎁 **Prêmios Disponíveis**: biblioteca pessoal
-- 🎁 **Estatísticas**: total conquistado e tarefas completas
-- 🎁 **Gestão completa**: criar, usar, excluir prêmios
+### 🎁 **Sistema de Prêmios**
 
-### **Aba Perfil**
-- 👤 **Informações pessoais**: nome e foto
-- 📊 **Estatísticas do dia**: total, completas, pendentes
-- 🏆 **Progresso semanal**: troféus conquistados
-- 💾 **Dados salvos** automaticamente
+1. **Navegação por Semanas**
+   - Use o seletor de semanas na aba "Prêmios"
+   - Navegue entre semanas passadas e futuras
+   - Veja prêmios organizados cronologicamente
 
-## 💾 **Armazenamento de Dados**
+2. **Usando Prêmios**
+   - Clique no botão ✅ para marcar como "usado"
+   - Prêmios são removidos da lista após uso
+   - Acompanhe estatísticas semanais e totais
 
-Todos os dados são salvos localmente no navegador:
+### 👤 **Perfil e Personalização**
+
+1. **Configurar Perfil**
+   - Adicione foto personalizada
+   - Defina seu nome
+   - Salve alterações
+
+2. **Estatísticas**
+   - Veja progresso diário
+   - Acompanhe troféus semanais
+   - Analise suas métricas
+
+## ⌨️ Atalhos de Teclado
+
+| Atalho | Função |
+|--------|---------|
+| `Ctrl + N` | Nova tarefa |
+| `ESC` | Fechar modais |
+| `1` | Aba Tarefas |
+| `2` | Aba Prêmios |
+| `3` | Aba Perfil |
+
+## 💾 Armazenamento de Dados
+
+### 🗄️ **Dados Locais**
+Todos os dados são armazenados localmente no navegador usando `localStorage`:
+
+- **futureTasks**: Tarefas organizadas por dia
+- **futuraWeeklyRewards**: Prêmios organizados por semana
+- **futuraProfile**: Dados do perfil do usuário
+- **futuraTrophies**: Troféus conquistados
+
+### 📤 **Backup e Restore**
 
 ```javascript
-// Estrutura de dados no localStorage
-{
-  "futuraTasks": {
-    "monday": [...tarefas],
-    "tuesday": [...tarefas],
-    // ... outros dias
-  },
-  "futuraRewards": [...premios_disponiveis],
-  "futuraEarnedRewards": [...premios_conquistados],
-  "futuraProfile": {
-    "name": "Nome do usuário",
-    "photo": "data:image/..."
-  },
-  "futuraTrophies": {
-    "monday": { "date": "...", "tasks": 5 },
-    // ... outros dias conquistados
-  }
-}
+// Exportar dados (adicione ao console do navegador)
+exportData(); // Baixa arquivo JSON com backup
+
+// Importar dados
+importData(file); // Restaura dados de arquivo JSON
 ```
 
-## 🎨 **Paleta de Cores**
+## 🔧 Funcionalidades Técnicas
 
-```css
-:root {
-  --primary: #3b82f6;        /* Azul principal */
-  --secondary: #1d4ed8;      /* Azul escuro */
-  --accent: #60a5fa;         /* Azul claro */
-  --success: #22c55e;        /* Verde sucesso */
-  --warning: #f59e0b;        /* Amarelo aviso */
-  --danger: #ef4444;         /* Vermelho perigo */
-  --bg-primary: #0f172a;     /* Fundo principal */
-  --bg-secondary: #1e293b;   /* Fundo secundário */
-  --bg-card: #334155;        /* Fundo dos cards */
-  --text-primary: #f1f5f9;   /* Texto principal */
-  --text-secondary: #94a3b8; /* Texto secundário */
-}
-```
+### 📱 **Recursos Avançados**
+- **Auto-save**: Dados salvos automaticamente a cada 30 segundos
+- **Modo Offline**: Funciona completamente sem internet
+- **Notificações Push**: Lembretes do navegador (opcional)
+- **Service Worker**: Suporte para PWA (Progressive Web App)
+- **Responsivo**: Design adaptado para todas as telas
 
-## 🏗️ **Arquitetura do Código**
+### 🎨 **Personalização**
+- **Temas**: Sistema de cores CSS customizável
+- **Animações**: Transições e efeitos configuráveis
+- **Categorias**: Facilmente extensível para novas categorias
 
-### **Componentes Principais**
+## 📱 Progressive Web App (PWA)
 
-```javascript
-// Gerenciamento de Estado
-let tasks = {};              // Tarefas por dia
-let rewards = [];            // Prêmios disponíveis
-let earnedRewards = [];      // Prêmios conquistados
-let userProfile = {};        // Dados do usuário
-let trophies = {};          // Troféus conquistados
+FutureTasks pode ser instalado como um aplicativo:
 
-// Funções Principais
-init()                      // Inicialização
-loadTasks(day)             // Carrega tarefas do dia
-createTaskElement()        // Cria elemento visual da tarefa
-updateProgress()           // Atualiza progresso circular
-awardReward()             // Concede prêmio
-showRewardNotification()   // Mostra notificação
-```
+1. **Chrome/Edge**: Clique no ícone de instalação na barra de endereços
+2. **Firefox**: Menu → "Instalar esta página"
+3. **Safari**: Compartilhar → "Adicionar à Tela Inicial"
 
-### **Eventos e Interações**
+## 🔒 Privacidade e Segurança
 
-- **Tab switching**: Navegação entre abas
-- **Day switching**: Seleção de dias da semana
-- **Task management**: CRUD completo de tarefas
-- **Reward system**: Criação e conquista de prêmios
-- **Profile management**: Edição de dados pessoais
-- **Data persistence**: Salvamento automático
+- ✅ **100% Local**: Todos os dados ficam no seu dispositivo
+- ✅ **Sem Tracking**: Nenhum dado é enviado para servidores
+- ✅ **Sem Cookies**: Não usa cookies de terceiros
+- ✅ **Open Source**: Código completamente transparente
 
-## 🔧 **Customização**
+## 🎯 Casos de Uso
 
-### **Adicionar Novas Categorias**
-```javascript
-const categoryConfig = {
-  work: { icon: '💼', name: 'Trabalho', color: 'blue' },
-  // Adicione nova categoria aqui
-  fitness: { icon: '💪', name: 'Fitness', color: 'orange' }
-};
-```
+### 👨‍💼 **Profissionais**
+- Gerenciar tarefas diárias do trabalho
+- Manter equilíbrio trabalho-vida pessoal
+- Gamificar produtividade da equipe
 
-### **Novos Ícones de Prêmios**
-```html
-<option value="🎯">🎯 Meta</option>
-<option value="🌟">🌟 Conquista</option>
-<!-- Adicione novos ícones aqui -->
-```
+### 🎓 **Estudantes**
+- Organizar cronograma de estudos
+- Manter motivação através de recompensas
+- Acompanhar progresso acadêmico
 
-### **Modificar Cores**
-```css
-:root {
-  --primary: #seu-azul-aqui;
-  --secondary: #seu-azul-escuro-aqui;
-  /* Modifique as variáveis CSS */
-}
-```
+### 🏠 **Uso Pessoal**
+- Organizar tarefas domésticas
+- Manter hábitos saudáveis
+- Gerenciar projetos pessoais
 
-## 📱 **Compatibilidade**
+## 🚀 Próximos Recursos
 
-### **Navegadores Suportados**
-- ✅ **Chrome** 80+
-- ✅ **Firefox** 75+
-- ✅ **Safari** 13+
-- ✅ **Edge** 80+
+### 🔄 **Em Desenvolvimento**
+- [ ] Sincronização com Google Calendar
+- [ ] Metas semanais e mensais
+- [ ] Relatórios de produtividade
+- [ ] Compartilhamento de conquistas
+- [ ] Modo equipe/família
+- [ ] Integração com Pomodoro Timer
 
-### **Dispositivos**
-- 📱 **Mobile**: Responsivo para smartphones
-- 💻 **Desktop**: Otimizado para telas grandes
-- 📟 **Tablet**: Compatível com tablets
-
-### **Requisitos**
-- JavaScript habilitado
-- LocalStorage disponível
-- Conexão com internet (apenas para CDNs)
-
-## 🚀 **Roadmap Futuro**
-
-### **Versão 2.1**
-- [ ] Sincronização na nuvem
-- [ ] Notificações push
-- [ ] Modo offline completo
-- [ ] Exportar/importar dados
-
-### **Versão 2.2**
-- [ ] Colaboração em equipe
-- [ ] Relatórios avançados
-- [ ] Integração com calendários
-- [ ] API REST
-
-### **Versão 3.0**
+### 💡 **Ideias Futuras**
+- [ ] Gamificação avançada (níveis, XP)
+- [ ] Prêmios personalizáveis pelo usuário
+- [ ] Análises com IA
 - [ ] Aplicativo mobile nativo
-- [ ] Inteligência artificial para sugestões
-- [ ] Gamificação avançada
-- [ ] Comunidade de usuários
+- [ ] Integração com wearables
 
-### **FAQ**
+## 🐛 Solução de Problemas
 
-**P: Os dados ficam salvos?**
-R: Sim, tudo é salvo no localStorage do navegador.
+### ❓ **Problemas Comuns**
 
-**P: Funciona offline?**
-R: Sim, após o primeiro carregamento funciona completamente offline.
+**Dados não salvam**
+- Verifique se o navegador permite localStorage
+- Certifique-se de não estar em modo privado/incógnito
 
-**P: Posso usar em múltiplos dispositivos?**
-R: Atualmente não há sincronização, mas está no roadmap.
+**Notificações não funcionam**
+- Permita notificações quando solicitado
+- Verifique configurações do navegador
 
-**P: Como fazer backup?**
-R: Use as ferramentas do desenvolvedor para exportar o localStorage.
+**Interface não carrega**
+- Verifique conexão com internet (para CDNs)
+- Limpe cache do navegador
+- Teste em navegador diferente
 
-<div align="center">
+### 🔧 **Debug**
+```javascript
+// Console do navegador - verificar dados
+console.log('Tasks:', localStorage.getItem('futureTasks'));
+console.log('Rewards:', localStorage.getItem('futuraWeeklyRewards'));
 
-**🌟 FuturaTasks - Organize sua vida com estilo! 🌟**
-
-[⬆️ Voltar ao topo](#-futuratasks-dark)
-
-</div>
+// Limpar todos os dados (CUIDADO!)
+localStorage.clear();
+```
